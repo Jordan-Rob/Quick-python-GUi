@@ -49,6 +49,19 @@ scrollbar.grid(row=3, column=3)
 Parts_list.configure(yscrollcommand=scrollbar.set)
 scrollbar.configure(command=Parts_list.yview)
 
+# buttons
+add_btn = Button(app, text='Add part', width=12, command=add_item)
+add_btn.grid(row=2, column=0, pady=20)
+
+Remove_btn = Button(app, text='Remove part', width=12, command=add_item)
+Remove_btn.grid(row=2, column=1, pady=20)
+
+update_btn = Button(app, text='update part', width=12, command=add_item)
+update_btn.grid(row=2, column=2, pady=20)
+
+Clear_btn = Button(app, text='Clear Input', width=12, command=add_item)
+Clear_btn.grid(row=2, column=3, pady=20)
+
 
 app.title('Part Manager')
 app.geometry('700x350')

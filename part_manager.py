@@ -36,6 +36,11 @@ Price_label.grid(row=1, column=2)
 Price_entry = Entry(app, width=25, textvariable=Price_text)
 Price_entry.grid(row=1, column=3)
 
+# Parts List
+Parts_list = Listbox(app, height=8, width=50)
+Parts_list.grid(row=3, column=0, columnspan=4, rowspan=6, pady=20, padx=20)
+
+
 app.title('Part Manager')
 app.geometry('700x350')
 

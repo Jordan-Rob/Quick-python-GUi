@@ -38,7 +38,16 @@ Price_entry.grid(row=1, column=3)
 
 # Parts List
 Parts_list = Listbox(app, height=8, width=50)
-Parts_list.grid(row=3, column=0, columnspan=4, rowspan=6, pady=20, padx=20)
+Parts_list.grid(row=3, column=0, columnspan=3, rowspan=6, pady=20, padx=20)
+
+
+# scrollbar
+scrollbar = Scrollbar(app)
+scrollbar.grid(row=3, column=3)
+
+# set scroll to listbox
+Parts_list.configure(yscrollcommand=scrollbar.set)
+scrollbar.configure(command=Parts_list.yview)
 
 
 app.title('Part Manager')
